@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manu Gupta — Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress"></div>
+
+  <!-- PARTICLES -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- HUD CORNERS -->
+  <div class="hud-corner hud-tl"></div>
+  <div class="hud-corner hud-tr"></div>
+  <div class="hud-corner hud-bl"></div>
+  <div class="hud-corner hud-br"></div>
+
+  <!-- CURSOR -->
+  <div class="cursor-outer" id="cursorOuter"></div>
+  <div class="cursor-inner" id="cursorInner"></div>
+
+  <!-- STICKY DOWNLOAD -->
+  <div class="sticky-btn">
+    <a href="https://manuguptas.github.io/resume/" download>
+      <svg viewBox="0 0 24 24">
+        <path d="M5 20h14v-2H5v2zm7-18v10.17l3.59-3.58L17 10l-5 5-5-5 1.41-1.41L11 12.17V2h1z" />
+      </svg>
+      Download CV
+    </a>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">MG<span>.</span></a>
+    <div class="nav-links">
+      <a href="#skills" data-index="01">Skills</a>
+      <a href="#experience" data-index="02">Experience</a>
+      <a href="#projects" data-index="03">Projects</a>
+      <a href="#certifications" data-index="04">Certs</a>
+      <a href="#contact" data-index="05">Contact</a>
+    </div>
+    <div class="nav-status">
+      <div class="status-dot"></div>
+      ONLINE · AVAILABLE
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb orb1"></div>
+    <div class="hero-orb orb2"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">Full Stack Developer</div>
+      <h1 class="hero-name">
+        Manu<br>
+        <span class="glow-text">Gupta</span>
+      </h1>
+      <p class="hero-role">Building scalable digital experiences</p>
+      <p class="hero-desc">
+        Full Stack Developer with hands-on experience in React, Node.js, and modern databases.
+        Delivered 8+ production projects — LMS platforms, CRM systems, and IoT-integrated applications.
+      </p>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">8+</div>
+          <div class="hero-stat-label">Projects</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">1yr</div>
+          <div class="hero-stat-label">Experience</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">1K+</div>
+          <div class="hero-stat-label">Users Served</div>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Projects ▶</a>
+        <a href="mailto:manugulta453@gmail.com" class="btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div style="position:relative;">
+        <div class="profile-card" id="profileCard">
+          <div class="profile-corner pc-tl"></div>
+          <div class="profile-corner pc-tr"></div>
+          <div class="profile-corner pc-bl"></div>
+          <div class="profile-corner pc-br"></div>
+          <div class="profile-img-wrap">
+            <img src="./pic2.jpeg" alt="Manu Gupta"
+              onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'width:100%;height:100%;background:linear-gradient(135deg,rgba(0,255,170,0.2),rgba(123,47,255,0.2));display:flex;align-items:center;justify-content:center;font-family:Orbitron,monospace;font-weight:900;font-size:1.8rem;color:#00ffaa\'>MG</div>'">
+          </div>
+          <div class="profile-name">Manu Gupta</div>
+          <div class="profile-title">Full Stack Developer</div>
+
+          <div class="xp-bar-wrap">
+            <div class="xp-bar-label"><span>SKILL XP</span><span>LVL MAX</span></div>
+            <div class="xp-bar">
+              <div class="xp-fill" style="width:92%"></div>
+            </div>
+          </div>
+          <div class="xp-bar-wrap">
+            <div class="xp-bar-label"><span>PROJECT XP</span><span>8/10</span></div>
+            <div class="xp-bar">
+              <div class="xp-fill" style="width:80%; animation-delay: 1.2s;"></div>
+            </div>
+          </div>
+
+          <div class="profile-stats" style="margin-top:16px;">
+            <div class="stat-item">
+              <div class="stat-num">8+</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">1yr</div>
+              <div class="stat-label">XP</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">1K+</div>
+              <div class="stat-label">Users</div>
+            </div>
+          </div>
+          <div class="profile-tags">
+            <span class="profile-tag">React</span>
+            <span class="profile-tag">Node.js</span>
+            <span class="profile-tag">MySQL</span>
+            <span class="profile-tag">IoT</span>
+          </div>
+        </div>
+        <div class="floating-badge badge-left">
+          <span style="color:#00ffaa">●</span> <span style="color:var(--text)">Open to Work</span>
+        </div>
+        <div class="floating-badge badge-right">
+          <span>📍</span> <span style="color:var(--text)">West Bengal, IN</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-num">01</div>
+    <div class="section-tag">Technical Arsenal</div>
+    <h2 class="section-title">Skills &<br>Technologies</h2>
+    <p class="section-sub">A full-spectrum toolkit spanning frontend, backend, databases, and embedded systems.</p>
+
+    <div class="skills-grid reveal-stagger">
+      <div class="skill-card">
+        <div class="skill-icon-3d icon-js">🟨</div>
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-desc">Core scripting and dynamic web application logic</div>
+        <div class="skill-pills"><span class="skill-pill">ES6+</span><span class="skill-pill">TypeScript</span><span
+            class="skill-pill">DOM</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon-3d icon-react">⚛️</div>
+        <div class="skill-name">Frontend</div>
+        <div class="skill-desc">Responsive, production-grade UI development</div>
+        <div class="skill-pills"><span class="skill-pill">React.js</span><span class="skill-pill">Tailwind</span><span
+            class="skill-pill">Bootstrap</span><span class="skill-pill">CSS3</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon-3d icon-node">🟢</div>
+        <div class="skill-name">Backend</div>
+        <div class="skill-desc">Scalable server-side applications and REST APIs</div>
+        <div class="skill-pills"><span class="skill-pill">Node.js</span><span class="skill-pill">Express.js</span><span
+            class="skill-pill">REST API</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon-3d icon-db">🗄️</div>
+        <div class="skill-name">Databases</div>
+        <div class="skill-desc">Relational & NoSQL data architecture</div>
+        <div class="skill-pills"><span class="skill-pill">MySQL</span><span class="skill-pill">MongoDB</span><span
+            class="skill-pill">Optimization</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon-3d icon-python">🐍</div>
+        <div class="skill-name">Python & Java</div>
+        <div class="skill-desc">Multi-paradigm programming and scripting</div>
+        <div class="skill-pills"><span class="skill-pill">Python</span><span class="skill-pill">Java</span><span
+            class="skill-pill">PHP</span><span class="skill-pill">C</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon-3d icon-git">🔴</div>
+        <div class="skill-name">DevTools</div>
+        <div class="skill-desc">Version control, collaboration, and deployment</div>
+        <div class="skill-pills"><span class="skill-pill">Git</span><span class="skill-pill">GitHub</span><span
+            class="skill-pill">VS Code</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon-3d icon-iot">🤖</div>
+        <div class="skill-name">IoT & Arduino</div>
+        <div class="skill-desc">Embedded systems and hardware-software integration</div>
+        <div class="skill-pills"><span class="skill-pill">Arduino</span><span class="skill-pill">Bluetooth</span><span
+            class="skill-pill">IoT</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon-3d icon-api">🔮</div>
+        <div class="skill-name">Integrations</div>
+        <div class="skill-desc">Third-party APIs, payment gateways & auth modules</div>
+        <div class="skill-pills"><span class="skill-pill">Payment APIs</span><span class="skill-pill">Auth</span><span
+            class="skill-pill">OAuth</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-num">02</div>
+    <div class="section-tag">Work History</div>
+    <h2 class="section-title">Experience</h2>
+    <p class="section-sub">Building real-world solutions across startups and research environments.</p>
+
+    <div class="exp-timeline">
+      <div class="exp-item reveal">
+        <div class="exp-date">▸ Mar 2024 – Mar 2025</div>
+        <div class="exp-role">Web Developer</div>
+        <div class="exp-company">Saampark Technology & Research Pvt. Ltd. · Full-Time · Medinipur, WB</div>
+        <ul class="exp-points">
+          <li>Developed and maintained responsive, production-grade websites using React.js, Node.js, and Tailwind CSS
+            for clients across multiple sectors</li>
+          <li>Built robust RESTful APIs using Express.js and MongoDB to power dynamic web platforms with high
+            availability</li>
+          <li>Collaborated with the research and stock market analysis team to create data-driven dashboard interfaces
+          </li>
+          <li>Integrated payment gateways, domain/hosting APIs, and authentication modules — streamlining deployment
+            workflows for 8+ client projects</li>
+          <li>Handled full project lifecycle from client requirement gathering to post-launch support</li>
+        </ul>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-date">▸ Jan 2024 – May 2024</div>
+        <div class="exp-role">Software Engineer Intern</div>
+        <div class="exp-company">Code Clause · Internship · Remote (GitHub)</div>
+        <ul class="exp-points">
+          <li>Developed and maintained database-driven web applications using Node.js and Express.js for multiple
+            concurrent users</li>
+          <li>Conducted research on MySQL query optimization — improved indexing and join strategies to reduce data
+            fetching times</li>
+          <li>Resolved critical production website bugs, measurably improving web functionality, speed, and user
+            satisfaction</li>
+          <li>Provided rapid issue resolution during high-traffic periods, effectively preventing potential business
+            losses</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-num">03</div>
+    <div class="section-tag">Portfolio</div>
+    <h2 class="section-title">Featured<br>Projects</h2>
+    <p class="section-sub">End-to-end products built from ideation to deployment, serving real users.</p>
+
+    <div class="projects-grid">
+      <div class="project-card featured reveal">
+        <span class="project-badge badge-featured">⭐ Featured</span>
+        <div class="project-icon-3d picon-crm">🧩</div>
+        <div class="project-title">CRM — Customer Relationship Management System</div>
+        <div class="project-desc">A full-featured, production-grade CRM platform built to streamline sales pipelines,
+          customer interactions, and team collaboration. Designed with role-based access and real-time dashboards.</div>
+        <ul class="project-features">
+          <li>Customer lifecycle management — from lead capture to deal closure with visual Kanban pipeline</li>
+          <li>Role-based access control: Admin, Sales Manager, Agent — each with scoped dashboards</li>
+          <li>Real-time analytics dashboard with revenue trends, conversion rates, and team performance metrics</li>
+          <li>Integrated email & activity logging — every customer touchpoint tracked and timestamped</li>
+          <li>MySQL-powered relational database with optimized queries for high-volume contact records</li>
+          <li>RESTful API backend with JWT authentication and session management</li>
+          <li>Responsive React.js frontend with Tailwind CSS — mobile-first design for field agents</li>
+        </ul>
+        <div class="project-stack">
+          <span class="stack-tag">React.js</span><span class="stack-tag">Node.js</span><span
+            class="stack-tag">Express.js</span>
+          <span class="stack-tag">MySQL</span><span class="stack-tag">JWT Auth</span><span class="stack-tag">REST
+            API</span><span class="stack-tag">Tailwind CSS</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <span class="project-badge badge-new">Live</span>
+        <div class="project-icon-3d picon-lms">🎓</div>
+        <div class="project-title">Online Education System (LMS)</div>
+        <div class="project-desc">Final year capstone — a full-featured LMS supporting online classes, examinations, and
+          real-time doubt resolution. Scaled to 1,000+ active users.</div>
+        <ul class="project-features">
+          <li>Role-based access for students, teachers, and admins</li>
+          <li>Live online classes and exam modules</li>
+          <li>Real-time doubt resolution system</li>
+        </ul>
+        <div class="project-stack">
+          <span class="stack-tag">React.js</span><span class="stack-tag">Node.js</span><span
+            class="stack-tag">MySQL</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-icon-3d picon-img">🖼️</div>
+        <div class="project-title">Image Background Remover Tool</div>
+        <div class="project-desc">Browser-based tool allowing users to remove image backgrounds using an AI-powered API.
+          Clean UI with instant download capability.</div>
+        <ul class="project-features">
+          <li>AI-powered background removal via external API</li>
+          <li>Instant download with original quality preserved</li>
+          <li>Clean, intuitive single-page interface</li>
+        </ul>
+        <div class="project-stack">
+          <span class="stack-tag">JavaScript</span><span class="stack-tag">External API</span><span
+            class="stack-tag">HTML/CSS</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="grid-column: 1 / -1;">
+        <div class="project-icon-3d picon-iot">🚗</div>
+        <div class="project-title">IoT Bluetooth-Controlled Electric Car</div>
+        <div class="project-desc">Hardware project demonstrating hardware-software integration using Arduino and
+          Bluetooth modules. Built and programmed a functional Bluetooth-controlled electric car.</div>
+        <ul class="project-features">
+          <li>Bluetooth module integration for wireless control</li>
+          <li>Arduino-based motor control and steering logic</li>
+          <li>Demonstrated at Mallabhum Institute Robotics Workshop</li>
+        </ul>
+        <div class="project-stack">
+          <span class="stack-tag">Arduino</span><span class="stack-tag">Bluetooth</span><span
+            class="stack-tag">IoT</span><span class="stack-tag">C/C++</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CRM DEEP DIVE -->
+    <div class="crm-section reveal">
+      <div class="crm-header">
+        <div class="crm-icon-big">🧩</div>
+        <div>
+          <div class="section-tag" style="margin-bottom:6px;">Deep Dive</div>
+          <h3
+            style="font-family:'Orbitron',monospace;font-weight:800;font-size:1.4rem;letter-spacing:0.02em;text-transform:uppercase;">
+            CRM System — Feature Breakdown</h3>
+          <p
+            style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--muted);margin-top:6px;letter-spacing:0.08em;">
+            React · Node.js · Express · MySQL · JWT</p>
+        </div>
+      </div>
+      <div class="crm-features-grid">
+        <div class="crm-feature"><span class="crm-feature-icon">👥</span>
+          <div class="crm-feature-title">Contact Management</div>
+          <div class="crm-feature-desc">Full customer database with profile pages, interaction history, tags, and
+            priority levels. Bulk import via CSV.</div>
+        </div>
+        <div class="crm-feature"><span class="crm-feature-icon">📊</span>
+          <div class="crm-feature-title">Sales Pipeline</div>
+          <div class="crm-feature-desc">Visual Kanban board for tracking deals across stages — New, Qualified, Proposal,
+            Won/Lost. Drag-and-drop updates.</div>
+        </div>
+        <div class="crm-feature"><span class="crm-feature-icon">📈</span>
+          <div class="crm-feature-title">Analytics Dashboard</div>
+          <div class="crm-feature-desc">Revenue trends, monthly conversion rates, top-performing agents, and deal health
+            score — all in real-time.</div>
+        </div>
+        <div class="crm-feature"><span class="crm-feature-icon">🔐</span>
+          <div class="crm-feature-title">Role-Based Access</div>
+          <div class="crm-feature-desc">JWT-secured routes with three access tiers: Admin (full control), Manager (team
+            view), Agent (own records only).</div>
+        </div>
+        <div class="crm-feature"><span class="crm-feature-icon">📧</span>
+          <div class="crm-feature-title">Activity & Email Log</div>
+          <div class="crm-feature-desc">Timestamped logs for every call, email, meeting, and note. Never lose context on
+            any customer interaction.</div>
+        </div>
+        <div class="crm-feature"><span class="crm-feature-icon">🗄️</span>
+          <div class="crm-feature-title">Optimized MySQL Schema</div>
+          <div class="crm-feature-desc">Normalized relational schema with indexed queries, foreign key constraints, and
+            efficient join strategies.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="section-num">04</div>
+    <div class="section-tag">Recognition</div>
+    <h2 class="section-title">Certifications &<br>Achievements</h2>
+
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <div class="cert-icon-3d">🤖</div>
+        <div>
+          <div class="cert-title">Workshop on Robotics</div>
+          <div class="cert-issuer">Ardent Computech × Mallabhum Institute of Technology</div>
+          <div class="cert-desc">Completed an intensive 4-day robotics workshop (Jan 10–13, 2023) covering
+            hardware-software integration, embedded systems fundamentals, and hands-on project building. Certificate ID:
+            311165156.</div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon-3d">🌐</div>
+        <div>
+          <div class="cert-title">8+ Web Projects Delivered</div>
+          <div class="cert-issuer">Saampark Technology & Research Pvt. Ltd.</div>
+          <div class="cert-desc">Successfully delivered responsive, production-grade web solutions for clients across
+            multiple domains during 1 year of independent development work — from requirement gathering to post-launch
+            support.</div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon-3d">🎓</div>
+        <div>
+          <div class="cert-title">B.Tech — Computer Science & Engineering</div>
+          <div class="cert-issuer">Mallabhum Institute of Technology · 2021–2025</div>
+          <div class="cert-desc">Final year project: Online Education System serving 1,000+ active users — featuring
+            live classes, examinations, and real-time doubt resolution with role-based access control.</div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon-3d">⚡</div>
+        <div>
+          <div class="cert-title">Software Engineer Internship</div>
+          <div class="cert-issuer">Code Clause · Jan–May 2024</div>
+          <div class="cert-desc">Completed a software engineering internship focused on full-stack web development,
+            MySQL optimization, and production bug resolution — contributing to measurable performance improvements.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-num">05</div>
+    <div class="section-tag">Let's Connect</div>
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-sub">Open to full-time roles, freelance projects, and collaborations.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <a href="tel:9064837076" class="contact-item reveal">
+          <div class="contact-icon-3d">📞</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">+91 9064837076</div>
+          </div>
+        </a>
+        <a href="mailto:manugulta453@gmail.com" class="contact-item reveal">
+          <div class="contact-icon-3d">✉️</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">manugulta453@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/manugupta7" target="_blank" class="contact-item reveal">
+          <div class="contact-icon-3d">🔗</div>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">linkedin.com/in/manugupta7</div>
+          </div>
+        </a>
+        <a href="https://github.com/Manuguptas" target="_blank" class="contact-item reveal">
+          <div class="contact-icon-3d">💻</div>
+          <div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">github.com/Manuguptas</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="reveal">
+        <div
+          style="background:var(--card);border:1px solid var(--border);padding:36px;position:relative;overflow:hidden;clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px));">
+          <div
+            style="position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(0,255,170,0.1),transparent);border-radius:50%;">
+          </div>
+          <div
+            style="font-family:'Orbitron',monospace;font-weight:800;font-size:1.1rem;margin-bottom:8px;letter-spacing:0.04em;text-transform:uppercase;">
+            Ready to build something great?</div>
+          <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;margin-bottom:24px;">Whether it's a new
+            product, a complex web application, or a CRM system for your business — I'd love to discuss how I can
+            contribute.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div
+              style="display:flex;align-items:center;gap:10px;font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--muted);">
+              <span style="color:var(--accent)">▸</span> Full-stack web development</div>
+            <div
+              style="display:flex;align-items:center;gap:10px;font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--muted);">
+              <span style="color:var(--accent)">▸</span> CRM & business dashboard solutions</div>
+            <div
+              style="display:flex;align-items:center;gap:10px;font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--muted);">
+              <span style="color:var(--accent)">▸</span> React + Node.js application architecture</div>
+            <div
+              style="display:flex;align-items:center;gap:10px;font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:var(--muted);">
+              <span style="color:var(--accent)">▸</span> IoT & Arduino project integration</div>
+          </div>
+          <a href="mailto:manugulta453@gmail.com" class="btn-primary" style="margin-top:28px;display:inline-flex;">Send
+            a Message ▶</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>© 2025 MANU GUPTA · FULL STACK DEVELOPER · WEST BENGAL, INDIA</div>
+    <div style="display:flex;gap:20px;">
+      <a href="https://github.com/Manuguptas" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/manugupta7" target="_blank">LinkedIn</a>
+      <a href="mailto:manugulta453@gmail.com">Email</a>
+    </div>
+  </footer>
+
+  <script>
+    // ===== SCROLL PROGRESS =====
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+      progressBar.style.width = pct + '%';
+    });
+
+    // ===== CURSOR =====
+    const cursorOuter = document.getElementById('cursorOuter');
+    const cursorInner = document.getElementById('cursorInner');
+    let mx = 0, my = 0, ox = 0, oy = 0;
+
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cursorInner.style.left = mx + 'px';
+      cursorInner.style.top = my + 'px';
+    });
+
+    function animateCursor() {
+      ox += (mx - ox) * 0.1;
+      oy += (my - oy) * 0.1;
+      cursorOuter.style.left = ox + 'px';
+      cursorOuter.style.top = oy + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    document.querySelectorAll('a, button, .skill-card, .project-card, .cert-card').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursorOuter.style.width = '56px';
+        cursorOuter.style.height = '56px';
+        cursorOuter.style.borderColor = 'var(--accent2)';
+        cursorInner.style.width = '10px';
+        cursorInner.style.height = '10px';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursorOuter.style.width = '36px';
+        cursorOuter.style.height = '36px';
+        cursorOuter.style.borderColor = 'var(--accent)';
+        cursorInner.style.width = '6px';
+        cursorInner.style.height = '6px';
+      });
+    });
+
+    // ===== PARTICLE CANVAS =====
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+    let W = canvas.width = window.innerWidth;
+    let H = canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      W = canvas.width = window.innerWidth;
+      H = canvas.height = window.innerHeight;
+    });
+
+    const particles = [];
+    const PARTICLE_COUNT = 80;
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      particles.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        size: Math.random() * 1.5 + 0.3,
+        opacity: Math.random() * 0.5 + 0.1,
+        color: Math.random() > 0.5 ? '0,255,170' : '123,47,255'
+      });
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, W, H);
+      particles.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+        if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${p.color},${p.opacity})`;
+        ctx.fill();
+      });
+      // Draw connections
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 100) {
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(0,255,170,${0.06 * (1 - dist / 100)})`;
+            ctx.lineWidth = 0.5;
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(drawParticles);
+    }
+    drawParticles();
+
+    // ===== 3D CARD TILT =====
+    const card = document.getElementById('profileCard');
+    if (card) {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `rotateY(${x * 16}deg) rotateX(${-y * 10}deg) scale(1.02)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'rotateY(0) rotateX(0) scale(1)';
+      });
+    }
+
+    // ===== SCROLL REVEAL =====
+    const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 60);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // ===== ACTIVE NAV =====
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+      navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent)' : '';
+      });
+    });
+
+    // ===== CLICK RIPPLE =====
+    document.addEventListener('click', e => {
+      const ripple = document.createElement('div');
+      ripple.style.cssText = `
+    position: fixed; left: ${e.clientX}px; top: ${e.clientY}px;
+    width: 0; height: 0;
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; z-index: 9996; opacity: 0.8;
+    animation: ripple-out 0.6s ease-out forwards;
+  `;
+      document.body.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 600);
+    });
+
+    // Add ripple keyframe
+    const style = document.createElement('style');
+    style.textContent = `@keyframes ripple-out {
+  to { width: 80px; height: 80px; opacity: 0; }
+}`;
+    document.head.appendChild(style);
+
+    // ===== SKILL CARD COUNT-UP =====
+    document.querySelectorAll('.stat-num, .hero-stat-num').forEach(el => {
+      const text = el.textContent;
+      const num = parseFloat(text);
+      if (isNaN(num)) return;
+      const suffix = text.replace(/[\d.]/g, '');
+      let start = 0;
+      const inc = num / 40;
+      const timer = setInterval(() => {
+        start += inc;
+        if (start >= num) { el.textContent = text; clearInterval(timer); return; }
+        el.textContent = Math.floor(start) + suffix;
+      }, 30);
+    });
+
+  setTimeout(() => {
+  const div = document.createElement("div");
+  div.innerText = "Use desktop mode for best experience!";
+  div.style.position = "fixed";
+  div.style.bottom = "300px";
+  div.style.right = "20px";
+  div.style.background = "#000";
+  div.style.color = "#fff";
+  div.style.padding = "10px 15px";
+  div.style.borderRadius = "8px";
+  document.body.appendChild(div);
+
+  setTimeout(() => div.remove(), 5000);
+}, 2000);
+
+
+  </script>
+</body>
+
+</html>
